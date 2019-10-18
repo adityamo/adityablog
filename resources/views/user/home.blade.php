@@ -23,7 +23,7 @@
                                     <span class="animated-item">Aditya</span>
                                     <span class="animated-item">ASP.Net C#</span>
                                     <span class="animated-item">Designer</span>
-                                    <span class="animated-item">Laravel</span>
+                                    
                                 </div>
                         </h1>
 
