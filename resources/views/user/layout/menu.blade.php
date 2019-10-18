@@ -23,6 +23,8 @@
                     <li class="nav-item">
                         <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
                     </li>
+
+                   
                 </ul>
 
                 <ul class="navbar-nav ml-lg-auto">
@@ -30,7 +32,9 @@
                       <div class="color-mode d-lg-flex justify-content-center align-items-center">
                         <i class="color-mode-icon"></i>
                         Color mode
+                        <div class="ml-lg-4" >Sign in </div>
                       </div>
+                      
                     </div>
                 </ul>
             </div>
