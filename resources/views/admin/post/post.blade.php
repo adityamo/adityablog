@@ -29,10 +29,15 @@
           <div class="box-header with-border">
             <h3 class="box-title">Data Posting</h3>
           </div>
-          
+          @if (count($errors) > 0)
+            @foreach ($errors ->all() as $error)
+            <p class="alert alert-danger"> {{ $error}}</p>
+            @endforeach
+          @endif  
           <!-- /.box-header -->
           <!-- form start -->
-          <form>
+          <form role="form" action="{{ route('post.store') }}" method="post">
+          {{ csrf_field() }}
           <div class="box-body">
             <div class="col-lg-6">
                     <div class="form-group">
@@ -78,28 +83,28 @@
                 <button type="button" class="btn btn-default btn-sm" data-widget="collapse" data-toggle="tooltip"
                         title="Collapse">
                   <i class="fa fa-minus"></i></button>
-                <button type="button" class="btn btn-default btn-sm" data-widget="remove" data-toggle="tooltip"
-                        title="Remove">
-                  <i class="fa fa-times"></i></button>
+                
               </div>
               <!-- /. tools -->
             </div>
             <!-- /.box-header -->
             <div class="box-body pad">
-              <form>
+              
                 <textarea class="textarea" placeholder="Place some text here" name="body"
                           style="width: 100%; height: 200px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
-              </form>
+              
             </div>
           </div>
+
+          <div class="box-footer">
+                <input type="submit" class="btn btn-primary">
+              </div>
         </div>
 
                 
               <!-- /.box-body -->
 
-              <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </div>
+             
            
           </form>
         </div>
