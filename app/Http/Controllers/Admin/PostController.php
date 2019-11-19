@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Model\user\posts;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -44,12 +45,14 @@ class PostController extends Controller
 
         ]);
 
-        $post = new Post;
+        $post = new posts;
         $post->title = $request->title;
         $post->subtitle = $request->subtitle;
         $post->slug = $request->slug;
         $post->body = $request->body;
         $post->save();
+
+        return redirect(route('post.index'));
     }
 
     /**

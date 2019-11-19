@@ -96,7 +96,7 @@
             </div>
           </div>
 
-          <div class="box-footer">
+              <div class="box-footer">
                 <input type="submit" class="btn btn-primary">
               </div>
         </div>

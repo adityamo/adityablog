@@ -1,5 +1,9 @@
 @extends('admin.layout.app')
 
+@section('headSection')
+<link rel="stylesheet" href="{{ asset('admin/plugins/select2/select2.min.css') }}">
+@endsection
+
 @section('main-content')
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -24,25 +28,36 @@
           <div class="box-header with-border">
             <h3 class="box-title">Titles</h3>
           </div>
-          
+          @if (count($errors) > 0)
+            @foreach ($errors ->all() as $error)
+            <p class="alert alert-danger"> {{ $error}}</p>
+            @endforeach
+          @endif  
           <!-- /.box-header -->
           <!-- form start -->
-          <form>
+          <form role="form" action="{{ route('tag.store')}}" method="post">
+          {{ csrf_field() }}
           <div class="box-body">
-            <div class="col-lg-6">
-                    <div class="form-group">
-                             <label for="title">Tag Title</label>
-                            <input type="text" class="form-control" name="tag" id="tag" placeholder="Tag Title">
-                    </div>
+          <div class="col-lg-offset-3 col-lg-6">
+            <div class="form-group">
+              <label for="name" class="">Tag Title</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="Tag title">
+            </div>
 
-                     <div class="form-group">
-                        <label for="subtitle">Sub Title</label>
-                         <input type="text" class="form-control" name="slug" id="slug"  placeholder="Masukan Slug">
-                     </div>
-                    <div class="form-group">
-                         <button type="submit" class="btn btn-primary">Submit</button>
-                     </div>
-                </div>
+            <div class="form-group">
+              <label for="slug" class="">Tag Slug</label>
+              <input type="text" class="form-control" id="slug" name="slug" placeholder="slug">
+            </div>
+
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <a href="{{ route('tag.index')}}" class="btn btn-warning">Back</a>
+            </div>
+
+          </div>
+          </div>
+          
+          </form>
                
 
              

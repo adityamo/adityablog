@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-sm navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="index.html"><i class='uil uil-user'></i> Aditya Septama</a>
-
+            <a class="navbar-brand" href="http://www.linkedin.com/in/aditya-septama-202867107"><i class='uil uil-user'></i> Aditya Septama</a>
+            
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
                 aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,7 +24,9 @@
                         <a href="#contact" class="nav-link"><span data-hover="Contact">Contact</span></a>
                     </li>
 
-                   
+                   <li class="nav-item">
+                        <a href="{{ route('admin.home') }}" class="nav-link">Sign in</a>
+                   </li>
                 </ul>
 
                 <ul class="navbar-nav ml-lg-auto">
@@ -32,9 +34,9 @@
                       <div class="color-mode d-lg-flex justify-content-center align-items-center">
                         <i class="color-mode-icon"></i>
                         Color mode
-                        <div class="ml-lg-4" >Sign in </div>
+                        
                       </div>
-                      
+                     
                     </div>
                 </ul>
             </div>

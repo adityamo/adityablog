@@ -33,7 +33,14 @@
           </div>
         </div>
         <div class="box-body">
-          Start creating your amazing application!
+        <div class="col-md-12">
+            <div class="col-md-2">
+              <a href="{{ route('tag.create') }}" class="btn btn-success">Tambah Data</a>
+            </div>
+              
+          </div>
+          <div class="col-md-12"></div>
+          
         </div>
         <!-- /.box-body -->
         <div class="box-footer">
