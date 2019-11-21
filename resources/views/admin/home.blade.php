@@ -33,7 +33,7 @@
           </div>
         </div>
         <div class="box-body">
-          Start creating your amazing application!
+          Welcome aboard !
         </div>
         <!-- /.box-body -->
         <div class="box-footer">

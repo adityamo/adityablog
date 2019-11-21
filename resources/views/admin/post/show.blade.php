@@ -1,4 +1,7 @@
 @extends('admin.layout.app')
+@section('headSection')
+<link rel="stylesheet" href="{{asset('admin/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css')}}">
+@endsection
 
 @section('main-content')
 
@@ -23,7 +26,9 @@
       <div class="box">
         <div class="box-header with-border">
           <h3 class="box-title">Data Posting</h3>
-
+         
+          <a class="col-md-offset-1 btn btn-success" href="{{ route('post.create') }}" >Tambah Data</a>
+        
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                     title="Collapse">
@@ -33,13 +38,35 @@
           </div>
         </div>
         <div class="box-body">
-          <div class="col-md-12">
-            <div class="col-md-2">
-              <a href="{{ route('post.create') }}" class="btn btn-success">Tambah Data</a>
+            <div class="box">
+               <div class="box-header">
+                  <h3 class="box-title">Data Post</h3>
+               </div>
+
+               <div class="box-body">
+                  <table id="example1" class="table table-bordered table-striped">
+                      <thead>
+                          <tr>
+                            <th>S.No</th>
+                            <th>Title</th>
+                            <th>Sub Title</th>
+                            <th>Slug</th>
+                            <th>Edit</th>
+                          </tr>
+                      </thead>
+
+                   <tr>
+                  <td>Gecko</td>
+                  <td>Firefox 3.0</td>
+                  <td>Win 2k+ / OSX.3+</td>
+                  <td>1.9</td>
+                  <td>A</td>
+                </tr>
+                <tr>
+                  </table>
+               </div>
             </div>
-              
-          </div>
-          <div class="col-md-12"></div>
+         
           
         </div>
         <!-- /.box-body -->
@@ -54,4 +81,22 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
+  
+@endsection
+@section('footerSection')
+<script src="{{ asset('admin/bower_components/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('admin/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js') }}"></script>
+<script>
+  $(function () {
+    $('#example1').DataTable()
+    $('#example2').DataTable({
+      'paging'      : true,
+      'lengthChange': false,
+      'searching'   : false,
+      'ordering'    : true,
+      'info'        : true,
+      'autoWidth'   : false
+    })
+  })
+</script>
 @endsection

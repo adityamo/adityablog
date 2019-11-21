@@ -24,15 +24,16 @@
           <div class="box-header with-border">
             <h3 class="box-title">Category</h3>
           </div>
-          
+            @include('includes.message')
           <!-- /.box-header -->
           <!-- form start -->
-          <form>
+          <form role="form" action="{{ route('category.store')}}" method="post">
+          {{ csrf_field() }}
           <div class="box-body">
             <div class="col-lg-6">
                     <div class="form-group">
                              <label for="category">Category Title</label>
-                            <input type="text" class="form-control" name="category" id="category" placeholder="Masukan Catgory">
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Masukan Catgory">
                     </div>
 
                      <div class="form-group">
@@ -41,6 +42,7 @@
                      </div>
                     <div class="form-group">
                          <button type="submit" class="btn btn-primary">Submit</button>
+                         <a href="{{ route('category.index')}}" class="btn btn-warning">Back</a>
                      </div>
                 </div>
                

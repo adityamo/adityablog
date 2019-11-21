@@ -13,11 +13,14 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    
     public function index()
     {
          return view('admin.post.show');
     }
 
+    
     /**
      * Show the form for creating a new resource.
      *

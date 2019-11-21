@@ -29,11 +29,7 @@
           <div class="box-header with-border">
             <h3 class="box-title">Data Posting</h3>
           </div>
-          @if (count($errors) > 0)
-            @foreach ($errors ->all() as $error)
-            <p class="alert alert-danger"> {{ $error}}</p>
-            @endforeach
-          @endif  
+          @include('includes.message')
           <!-- /.box-header -->
           <!-- form start -->
           <form role="form" action="{{ route('post.store') }}" method="post">
