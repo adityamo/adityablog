@@ -38,7 +38,7 @@
 
                 <div class="col-lg-5 col-md-12 col-12">
                     <div class="about-image svg">
-                        <img src="{{asset('user/images/undraw/undraw_online_page_cq94.svg')}}" class="img-fluid" alt="svg image">
+                        <img src="{{asset('public/user/images/undraw/undraw_online_page_cq94.svg')}}" class="img-fluid" alt="svg image">
                     </div>
                 </div>
 
@@ -60,26 +60,26 @@
                       <div class="owl-carousel owl-theme">
                         <div class="item">
                           <div class="project-info">
-                            <img src="{{asset('user/images/project/dasa.png')}}" class="img-fluid" alt="project image">
+                            <img src="{{asset('public/user/images/project/dasa.png')}}" class="img-fluid" alt="project image">
                           </div>
                         </div>
 
                         <div class="item">
                           <div class="project-info">
-                            <img src="{{asset('user/images/project/bmt.png')}}" class="img-fluid" alt="project image">
+                            <img src="{{asset('public/user/images/project/bmt.png')}}" class="img-fluid" alt="project image">
                           </div>
                         </div>
 
                         <div class="item">
                           <div class="project-info">
-                            <img src="{{asset('user/images/project/igp.png')}}" class="img-fluid" alt="project image">
+                            <img src="{{asset('public/user/images/project/igp.png')}}" class="img-fluid" alt="project image">
                           </div>
                         </div>
 
                        
                         <div class="item">
                           <div class="project-info">
-                            <img src="{{asset('user/images/project/polos.png')}}" class="img-fluid" alt="project image">
+                            <img src="{{asset('public/user/images/project/polos.png')}}" class="img-fluid" alt="project image">
                           </div>
                         </div>
                       </div>
@@ -231,13 +231,13 @@
 
     <!-- FOOTER -->
      include('user/layout/footer')
-     <script src="{{asset('user/js/jquery-3.3.1.min.js')}}"></script>
-    <script src="{{asset('user/js/popper.min.js')}}"></script>
-    <script src="{{asset('user/js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('user/js/Headroom.js')}}"></script>
-    <script src="{{asset('user/js/jQuery.headroom.js')}}"></script>
-    <script src="{{asset('user/js/owl.carousel.min.js')}}"></script>
-    <script src="{{asset('user/js/smoothscroll.js')}}"></script>
-    <script src="{{asset('user/js/custom.js')}}"></script>
+     <script src="{{asset('public/user/js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{asset('public/user/js/popper.min.js')}}"></script>
+    <script src="{{asset('public/user/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('public/user/js/Headroom.js')}}"></script>
+    <script src="{{asset('public/user/js/jQuery.headroom.js')}}"></script>
+    <script src="{{asset('public/user/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('public/user/js/smoothscroll.js')}}"></script>
+    <script src="{{asset('public/user/js/custom.js')}}"></script>
   </body>
 </html>
